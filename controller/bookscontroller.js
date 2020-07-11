@@ -14,6 +14,5 @@ module.exports = {
         return res.render('home',{
             result
         })
-        
     }
     }
