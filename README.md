@@ -22,7 +22,7 @@
 <h2>Technology Used</h2>
 <p>I used MONGODB as a database to store data from users who interact in the website. Node.js as my code editer as well as Express for my framework.Lastly, EJS as a simple template language.</p>
 
-<h2>Difficulties and Outcomes<h2>
+<h2>Difficulties and Outcomes</h2>
 <p>THe biggest difficulty for me would be the backend of making this application because i understood how to do it based on the lecture notes but i did not know how to use them for my own project. It took me quite some time to go over everything thoroughly and try to apply it.</p>
 
 <p>Fortunately, i managed to do what i wanted to do but it came with a cost - not having enough time for detailed adjustments. Nonetheless, i`m satisfied with the layout of the website.</p>
