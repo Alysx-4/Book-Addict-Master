@@ -4,6 +4,8 @@ const booksrepository = require('../repository/booksrepository');
 
 module.exports = {
     async create (req, res){
+        console.log('testing')
+        console.log(req.body)
         const result= await booksRepository.create(req.body)
         return res.redirect('/')
     } ,
@@ -12,5 +14,6 @@ module.exports = {
         return res.render('home',{
             result
         })
+        
     }
     }

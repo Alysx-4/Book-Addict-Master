@@ -3,7 +3,9 @@ const db = require('../models');
 module.exports = {
     async getAll () {
         try {
-            return await db.books.find().toArray();
+            const books = await db.books.find().toArray();
+            console.log(books)
+            return books
         } catch (err) {
             throw new Error(`Database Error - ${err.message}`);
         }

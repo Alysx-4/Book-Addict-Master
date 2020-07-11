@@ -9,14 +9,12 @@
 </head>
 
 <body>
-
     <div id="background_container">
 	<div id="menu">
     	<ul>
             <li><a href="#" class="current">Home</a></li>
             <li><a href="#">Search</a></li>
             <li><a href="/newbook">Books</a></li>            
-            <li><a href="#">My Books</a></li>
     	</ul>
     </div> 
     
@@ -26,7 +24,8 @@
     	
         <div id="content_left">
         	<div class="content_left_section">
-            	<h1>Categories</h1>
+                <h1>Categories</h1>
+                <nav>
                 <ul>
                     <li><a href="subpage.html">Science Fiction</a></li>
                     <li><a href="subpage.html">Non-Fiction</a></li>
@@ -53,6 +52,7 @@
                     <li><a href="#">Great Expectations</a></li>
             	</ul>
             </div>
+        </nav>
             
             <div class="content_left_section"></div>
         </div> `
@@ -60,13 +60,13 @@
         
         <div id="content_right">
         	<div class="product_box">
-            	<h1>More Than Words<span></span></h1>
+                <h1><%= result[2].title%><span></span></h1>
    	      <img src="./images/more_than_words.jpg" alt="image" />
                 <div class="product_info">
-                	<p>A story about family.</p>
+                	<p><%= result[0].description%></p>
                   <!-- <h3>$30</h3> -->
                     <!-- <div class="buy_now_button"><a href="subpage.html">Buy Now</a></div> -->
-                    <div class="detail_button"><a href="subpage.html">Details</a></div>
+                    <!-- <div class="detail_button"><a href="subpage.html">Details</a></div> -->
                 </div>
                 <div class="cleaner">&nbsp;</div>
                 
@@ -78,10 +78,10 @@
             	<h1>The Five People You Meet<span></span></h1>
        	    <img src="./images/the_five_people.jpg" alt="image" />
                 <div class="product_info">
-                	<p>The end is the begining</p>
+                	<p>Death is only the beginning</p>
                     <!-- <h3>$35</h3> -->
                     <!-- <div class="buy_now_button"><a href="subpage.html">Buy Now</a></div> -->
-                    <div class="detail_button"><a href="subpage.html">Details</a></div>
+                    <!-- <div class="detail_button"><a href="subpage.html">Details</a></div> -->
                 </div>
                 <div class="cleaner">&nbsp;</div>
             </div>
@@ -95,7 +95,7 @@
                 	<p>When all else fails..</p>
                     <!-- <h3>$65</h3> -->
                     <!-- <div class="buy_now_button"><a href="subpage.html">Buy Now</a></div> -->
-                    <div class="detail_button"><a href="#">Details</a></div>
+                    <!-- <div class="detail_button"><a href="#">Details</a></div> -->
                 </div>
                 <div class="cleaner">&nbsp;</div>
             </div>
@@ -109,7 +109,7 @@
                 	<p>Time is precious</p>
                     <!-- <h3>$45</h3> -->
                     <!-- <div class="buy_now_button"><a href="subpage.html">Buy Now</a></div> -->
-                    <div class="detail_button"><a href="#">Details</a></div>
+                    <!-- <div class="detail_button"><a href="#">Details</a></div> -->
                 </div>
                 <div class="cleaner">&nbsp;</div>
             </div>
