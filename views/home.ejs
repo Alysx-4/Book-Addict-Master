@@ -14,7 +14,7 @@
     	<ul>
             <li><a href="#" class="current">Home</a></li>
             <li><a href="#">Search</a></li>
-            <li><a href="/newbook">Books</a></li>            
+            <li><a href="/newbook">Create a Book</a></li>            
     	</ul>
     </div> 
     
@@ -59,29 +59,24 @@
         <!-- end of content left -->
         
         <div id="content_right">
+            <% for (let i = 0; i< result.length; i++) {%>
         	<div class="product_box">
-                <h1><%= result[2].title%><span></span></h1>
-   	      <img src="./images/more_than_words.jpg" alt="image" />
+                <h1><%= result[i].title%><span></span></h1>
+   	      <img src="<%= result[i].url%>" alt="image" />
                 <div class="product_info">
-                	<p><%= result[0].description%></p>
-                  <!-- <h3>$30</h3> -->
-                    <!-- <div class="buy_now_button"><a href="subpage.html">Buy Now</a></div> -->
-                    <!-- <div class="detail_button"><a href="subpage.html">Details</a></div> -->
+                	<p><%= result[i].description%></p>
                 </div>
                 <div class="cleaner">&nbsp;</div>
-                
+                <button onClick = "location.href='/editbook/<%=result[i]._id%>'">Edit</button>
             </div>
-            
             <div class="cleaner_with_width">&nbsp;</div>
+            <%}%>
             
-            <div class="product_box">
+            <!-- <div class="product_box">
             	<h1>The Five People You Meet<span></span></h1>
        	    <img src="./images/the_five_people.jpg" alt="image" />
                 <div class="product_info">
                 	<p>Death is only the beginning</p>
-                    <!-- <h3>$35</h3> -->
-                    <!-- <div class="buy_now_button"><a href="subpage.html">Buy Now</a></div> -->
-                    <!-- <div class="detail_button"><a href="subpage.html">Details</a></div> -->
                 </div>
                 <div class="cleaner">&nbsp;</div>
             </div>
@@ -93,31 +88,24 @@
    	      <img src="./images/the_book_theif.jpg" alt="image" />
                 <div class="product_info">
                 	<p>When all else fails..</p>
-                    <!-- <h3>$65</h3> -->
-                    <!-- <div class="buy_now_button"><a href="subpage.html">Buy Now</a></div> -->
-                    <!-- <div class="detail_button"><a href="#">Details</a></div> -->
                 </div>
                 <div class="cleaner">&nbsp;</div>
             </div>
             
             <div class="cleaner_with_width">&nbsp;</div>
-            
+            %
             <div class="product_box">
             	<h1>The Time Keeper<span></span></h1>
             	<img src="./images/the_time_keeper.jpg" alt="image" />
                 <div class="product_info">
                 	<p>Time is precious</p>
-                    <!-- <h3>$45</h3> -->
-                    <!-- <div class="buy_now_button"><a href="subpage.html">Buy Now</a></div> -->
-                    <!-- <div class="detail_button"><a href="#">Details</a></div> -->
-                </div>
                 <div class="cleaner">&nbsp;</div>
             </div>
             
             <div class="cleaner_with_height">&nbsp;</div>
                 
     	<div class="cleaner_with_height">&nbsp;</div>
-    </div> 
+    </div>  -->
 
         <!-- end of content -->
     
@@ -128,5 +116,6 @@
 	</div> 
 </div> 
 <!-- end of container -->
+
 </body>
 </html>
