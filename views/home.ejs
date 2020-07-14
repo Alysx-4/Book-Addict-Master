@@ -67,7 +67,7 @@
                 	<p><%= result[i].description%></p>
                 </div>
                 <div class="cleaner">&nbsp;</div>
-                <button onClick = "location.href='/editbook/<%=result[i]._id%>'">Edit</button>
+                <a href="/editbook/<%=result[i]._id%>"><button>Edit</button></a>
             </div>
             <div class="cleaner_with_width">&nbsp;</div>
             <%}%>

@@ -1,6 +1,7 @@
 const db = require('../models');
-const ObjectId = require('mongodb').ObjectId;
+const ObjectId = require('mongodb').ObjectID;
 const mongoose = require('mongoose');
+const { ObjectID } = require('mongodb');
 
 module.exports = {
     async getAll () {
@@ -25,14 +26,14 @@ module.exports = {
             throw new Error(`Due to ${err.message}, you are not allowed to add this book ${JSON.stringify(book)}`);
         }
     } ,
-    async findByid (id) {
+    async findByID (id) {
         try{
             console.log(id)
-            let newid = ObjectId(id)
+            let newid = ObjectID(id)
             console.log(newid)
-            const books = await db.books.findById(id);
-            console.log(books)
-            return books
+            // const books = await db.books.find( { _id: ObjectId('') } );
+            // console.log(books)
+            // return books
         }
      catch (err) {
         throw new Error(`Database Error - ${err.message}`);

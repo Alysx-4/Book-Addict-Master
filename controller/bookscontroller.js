@@ -1,6 +1,7 @@
 const booksRepository = require('../repository/booksrepository');
-const { getAll } = require('../repository/booksrepository');
+const { getAll, findByID } = require('../repository/booksrepository');
 const booksrepository = require('../repository/booksrepository');
+const { ObjectId } = require('mongodb');
 
 module.exports = {
     async create (req, res){
@@ -18,9 +19,11 @@ module.exports = {
     } ,
     async edit(req, res) {
         let id = req.params.id;
-        let result=await booksRepository.findByid(id);
-        res.render('edit', {
-            result
-        })
+        await booksRepository.findByID(id)
+        // let result=await booksRepository.find({_id: ObjectId('')})
+        // console.log(id)
+        // res.render('edit', {
+        //     result
+        // })
     }
 }
