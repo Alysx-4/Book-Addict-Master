@@ -1,7 +1,8 @@
 // DEPENDENCIES
 const express = require('express');
 const methodOverride = require('method-override');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
+const expressLayouts = require('express-ejs-layouts');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -11,6 +12,7 @@ db.connect().then(() => app.emit('ready'));
 
 // ///// Middleware //////
 app.set('view engine', 'ejs');
+app.use(expressLayouts);
 app.use(express.static('public'));
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: false }));;

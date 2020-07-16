@@ -7,9 +7,6 @@ module.exports  = (app) => {
     app.get('/newbook', bookscontroller.createbook);
     app.post('/newbook', booksController.create);
     app.get('/editbook/:id', booksController.edit);
-    app.put('/update',bookscontroller.update);
-        // })
-    //app.get('/newbook:/id', (req, res) => {res.render('show.ejs')});
-    // app.get('/newbook/:indexOfbooksrepository', (req, res) => 
-    // res.send(newbook[req.params]));
+    app.put('/editbook/:id/updatebook', bookscontroller.update);
+    app.delete('/:id', bookscontroller.delete);
 }

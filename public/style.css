@@ -157,13 +157,14 @@ img {
 	height: 220px;
 	padding: 10px;
 	border: 1px solid black;
+	margin: 0 10px 10px 0;
 }
 
 #content_right h1 {
 	padding: 10px;
-	margin: 0 0 20px 0;
-	font-size: 15px;
-	color: black;
+    margin: 0;
+    font-size: 15px;
+    color: black;
 	text-decoration: underline;
 }
 
@@ -171,7 +172,7 @@ img {
 	padding: 0 0 0 0;
 	margin: 0 0 20px 0;
 	font-size: 12px;
-	color: #e6e154;
+	color: #0a0a09;
 }
 
 #content_right h3 {
@@ -207,8 +208,9 @@ img {
 }
 
 .product_box img {
-	float: left;
-	margin-right: 20px;
+	max-width: 110px;
+    clear: both;
+    display: block;
 }
 
 .product_box .product_info {

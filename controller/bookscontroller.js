@@ -1,7 +1,8 @@
 const booksRepository = require('../repository/booksrepository');
 const { getAll, findByID } = require('../repository/booksrepository');
 const booksrepository = require('../repository/booksrepository');
-const { ObjectId } = require('mongodb');
+const { Db } = require('mongodb');
+const ObjectId = require('mongodb').ObjectID;
 
 module.exports = {
     async create (req, res){
@@ -18,12 +19,20 @@ module.exports = {
         res.render('new')
     } ,
     async edit(req, res) {
-        let id = req.params.id;
-        await booksRepository.findByID(id)
-        // let result=await booksRepository.find({_id: ObjectId('')})
-        // console.log(id)
-        // res.render('edit', {
-        //     result
-        // })
+        const id = req.params.id;
+        const result = await booksRepository.findByID(id)
+        return  res.render('edit', {
+            result
+        })
+    } ,     
+    async update(req, res) {
+        const id = req.params.id;
+        const result = await booksRepository.updateBook(id, req.body)
+        res.redirect('/');
+    } , 
+    async delete(req, res) {
+        const id = req.params.id;
+        const result = await booksRepository.deleteBook(id)
+        res.redirect('/');
     }
 }
