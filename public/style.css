@@ -9,6 +9,21 @@ body {
 	background:  tan;
 }
 
+/* edit and delete button*/
+button {
+	color: black;
+	font-family: monospace;
+	float: right;
+	border-radius: 2px;
+}
+
+.form-group {
+	color: black;
+	font-family: monospace;
+	padding: 10px;
+	margin: 10px ;
+}
+
 p {
 	margin: 0px;
 	padding: 0px;
@@ -203,6 +218,10 @@ img {
 	padding: 0 0 8px 0;
 }
 
+#content_right .button {
+	color: black;
+}
+
 .product_box h1 span {
 	font-weight: normal;
 }
@@ -219,10 +238,9 @@ img {
 }
 
 .product_info p {
-	margin-bottom: 15px;
+	margin-bottom: 9px;
 	color: black;
 	font-weight: bold;
-	
 }
 
 a:active, a:hover {text-decoration: underline;}
